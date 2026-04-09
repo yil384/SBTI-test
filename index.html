@@ -145,13 +145,33 @@
       margin-top: 28px;
     }
     .hero-subtitle {
-      color: #888;
-      font-size: 1rem;
-      margin-top: 0.6rem;
-      margin-bottom: 1.2rem;
-      letter-spacing: 0.08em;
+      color: #999;
+      font-size: 0.92rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
       position: relative;
       z-index: 1;
+    }
+    .hero-subtitle span { white-space: nowrap; }
+    .hero-formula {
+      display: inline-block;
+      font-family: 'Times New Roman', Georgia, serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 0.3rem;
+      margin-bottom: 0.8rem;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.02em;
+    }
+    .hero-formula sub, .hero-formula sup {
+      font-size: 0.7em;
     }
     .hero-icons {
       display: flex;
@@ -721,12 +741,28 @@
     }
 
     @media (max-width: 600px) {
-      .shell { padding: 14px 12px 42px; }
-      .hero, .test-wrap, .result-wrap { padding: 16px; }
-      .hero h1 { font-size: 32px; }
+      .shell { padding: 10px 8px 36px; }
+      .hero, .test-wrap, .result-wrap { padding: 14px; }
+      .hero h1 { font-size: 26px; letter-spacing: -0.02em; }
+      .hero-minimal { min-height: 80vh; min-height: 80dvh; padding: 32px 16px 28px; }
+      .hero-subtitle { font-size: 0.82rem; gap: 6px; flex-wrap: wrap; justify-content: center; }
+      .hero-formula { font-size: 0.75rem; }
+      .hero-icons { font-size: 1.5rem; gap: 12px; margin-top: 1.2rem; }
+      .hero-doodles span { font-size: 1.6rem; }
+      .hero-credits { font-size: 0.72rem; }
+      .btn-primary { padding: 12px 28px; font-size: 15px; }
       .question-title { font-size: 15px; }
+      .option { padding: 10px 12px; font-size: 14px; }
       .dim-grid,
       .score-grid { grid-template-columns: 1fr; }
+      .poster-image { max-height: 320px; }
+      .result-type-name { font-size: 24px; }
+    }
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 22px; }
+      .hero-formula { font-size: 0.68rem; }
+      .hero-icons { font-size: 1.2rem; gap: 8px; }
+      .hero-doodles span { font-size: 1.2rem; opacity: 0.05; }
     }
   </style>
 </head>
@@ -751,7 +787,16 @@
           <span style="bottom:5%;right:5%;transform:rotate(22deg);font-size:2rem">🎭</span>
         </div>
         <h1>MBTI已经过时，<br>SBTI 2.0来了。</h1>
-        <p class="hero-subtitle">57种人格 · 梗浓度拉满 · 抽象程度五颗星</p>
+        <p class="hero-formula">
+          ∫<sub>0</sub><sup>∞</sup> 114<i>t</i> · e<sup> −<i>t</i>²</sup> d<i>t</i>&nbsp; 种人格等你来测
+        </p>
+        <p class="hero-subtitle">
+          <span>🐍 永远的蛇</span>
+          <span>·</span>
+          <span>🏀 Mamba Out</span>
+          <span>·</span>
+          <span>🎭 GIAO!</span>
+        </p>
         <div class="hero-icons">
           <span>🐍</span><span>🤡</span><span>👑</span><span>💀</span><span>🔥</span>
         </div>
