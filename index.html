@@ -123,23 +123,70 @@
       margin-top: 22px;
     }
     .hero-minimal {
-      min-height: 48vh;
+      min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 42px 20px;
+      padding: 48px 24px 36px;
+      position: relative;
+      overflow: hidden;
     }
     .hero-minimal::after { display: none; }
     .hero-minimal h1 {
       max-width: none;
       margin: 0;
+      position: relative;
+      z-index: 1;
     }
     .hero-actions-single {
       justify-content: center;
       margin-top: 28px;
     }
+    .hero-subtitle {
+      color: #888;
+      font-size: 1rem;
+      margin-top: 0.6rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.08em;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-icons {
+      display: flex;
+      gap: 18px;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      opacity: 0.25;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-doodles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .hero-doodles span {
+      position: absolute;
+      font-size: 2.2rem;
+      opacity: 0.07;
+      user-select: none;
+    }
+    .hero-credits {
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      color: #bbb;
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-credits a { color: #999; }
 
     button {
       border: 0;
@@ -687,22 +734,33 @@
   <div class="shell">
     <section id="intro" class="screen active">
       <div class="hero card hero-minimal">
-        <h1>MBTI已经过时，SBTI 2.0来了。</h1>
-        <p style="color:#666; margin:-0.5rem 0 1.5rem; font-size:0.95rem;">47种人格 · 梗浓度拉满 · 抽象程度五颗星</p>
+        <div class="hero-doodles">
+          <span style="top:8%;left:6%;transform:rotate(-15deg)">🎮</span>
+          <span style="top:15%;right:10%;transform:rotate(12deg)">🐍</span>
+          <span style="top:45%;left:3%;transform:rotate(-8deg)">🔥</span>
+          <span style="top:70%;left:12%;transform:rotate(20deg)">💀</span>
+          <span style="top:25%;right:4%;transform:rotate(-20deg)">🤡</span>
+          <span style="top:60%;right:8%;transform:rotate(10deg)">👑</span>
+          <span style="top:80%;right:15%;transform:rotate(-12deg)">🐸</span>
+          <span style="bottom:10%;left:20%;transform:rotate(5deg)">⚡</span>
+          <span style="top:5%;left:40%;transform:rotate(-5deg)">🎯</span>
+          <span style="bottom:15%;right:30%;transform:rotate(15deg)">🧠</span>
+          <span style="top:35%;left:15%;transform:rotate(-25deg);font-size:1.8rem">🏀</span>
+          <span style="bottom:25%;left:8%;transform:rotate(8deg);font-size:1.6rem">🐂</span>
+          <span style="top:50%;right:3%;transform:rotate(-10deg);font-size:1.6rem">🎪</span>
+          <span style="bottom:5%;right:5%;transform:rotate(22deg);font-size:2rem">🎭</span>
+        </div>
+        <h1>MBTI已经过时，<br>SBTI 2.0来了。</h1>
+        <p class="hero-subtitle">57种人格 · 梗浓度拉满 · 抽象程度五颗星</p>
+        <div class="hero-icons">
+          <span>🐍</span><span>🤡</span><span>👑</span><span>💀</span><span>🔥</span>
+        </div>
         <div class="hero-actions hero-actions-single">
           <button id="startBtn" class="btn-primary">开始测试</button>
         </div>
-        <div style="padding-top: 2rem; display: flex; flex-direction: column; color:#999; font-size:0.85rem;">
-          <span>
-            原作者：
-            <a href="https://space.bilibili.com/417038183">B站@蛆肉儿串儿</a>
-          </span>
-          <span>
-            托管：Cloudflare (免费)
-          </span>
-          <span>
-            域名：Squarespace (自费)
-          </span>
+        <div class="hero-credits">
+          <span>原作者：<a href="https://space.bilibili.com/417038183">B站@蛆肉儿串儿</a></span>
+          <span>托管：Cloudflare · 域名：Squarespace</span>
         </div>
       </div>
     </section>
