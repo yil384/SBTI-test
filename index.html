@@ -1160,6 +1160,50 @@
           { label: '听完歌就好了，明天又是元气满满的一天', value: 1 },
           { label: '写了一大段没人看的小作文，发出去，秒删，再写，再发，再删，反复横跳直到手机没电', value: 2 }
         ]
+      },
+      {
+        id: 'keyboard_gate_q1',
+        special: true,
+        kind: 'keyboard_gate',
+        text: '你在评论区看到一个明显错误的观点，你会？',
+        options: [
+          { label: '无视，评论区而已', value: 1 },
+          { label: '默默点个踩', value: 2 },
+          { label: '打了一段话又删了，算了', value: 3 },
+          { label: '当场洋洋洒洒写了800字反驳长文', value: 4 }
+        ]
+      },
+      {
+        id: 'keyboard_gate_q2',
+        special: true,
+        kind: 'keyboard_trigger',
+        text: '你的800字长文发出后，对方回了一个"？"，你的反应是？',
+        options: [
+          { label: '气死了但忍住了', value: 1 },
+          { label: '又写了1500字的补充材料，附带三篇论文链接和一张数据表', value: 2 }
+        ]
+      },
+      {
+        id: 'food_gate_q1',
+        special: true,
+        kind: 'food_gate',
+        text: '现在是上午十一点，你脑子里在想什么？',
+        options: [
+          { label: '工作/学习的事', value: 1 },
+          { label: '中午吃什么', value: 2 },
+          { label: '中午吃什么以及下午茶吃什么以及晚饭吃什么', value: 3 },
+          { label: '今天不想吃饭', value: 4 }
+        ]
+      },
+      {
+        id: 'food_gate_q2',
+        special: true,
+        kind: 'food_trigger',
+        text: '你手机相册里食物照片占比大概是？',
+        options: [
+          { label: '还好吧，偶尔拍拍', value: 1 },
+          { label: '超过80%，而且每张都有构图和滤镜，有些还发了朋友圈小红书抖音三件套', value: 2 }
+        ]
       }
     ];
 
@@ -1445,6 +1489,66 @@
     "cn": "懂哥",
     "intro": "懂的都懂。",
     "desc": "恭喜你，DDDD懂哥人格——全网最讳莫如深、最高深莫测、最不明觉厉的存在。“懂的都懂”四个字，是你面对一切世间万象时的终极解法。它可以表示“我知道内幕但不方便说”，也可以表示“我完全不懂但我必须装懂”，还可以表示“这事儿太复杂了你自己去悟吧我先撤了”。DDDD永远保持着一种“我已看穿一切但选择慈悲沉默”的得道高人姿态。两个懂哥相遇时不需要语言，只需要互相意味深长地点一下头，然后同时打出四个字：“懂的都懂。”——交流结束，信息量比十篇论文还大。至于到底懂了什么？不好说，不能说，说了你也不懂。但是呢——懂的都懂。"
+  },
+  "KEY-B": {
+    "code": "KEY-B",
+    "cn": "键侠",
+    "intro": "键盘在手，天下我有。",
+    "desc": "恭喜你，KEY-B键侠人格——互联网最强战力，线下最弱人类。你的手指在键盘上拥有超光速，评论区里舌战群儒，弹幕里一句\u201c差不多得了\u201d就能引发千层楼大战。然而一旦拔掉网线，你连跟服务员说\u201c少放辣\u201d都要在心里排练三遍。KEY-B的战斗力曲线极为诡异：线上MAX，线下负数。你在屏幕后是咆哮的雄狮，在屏幕前是沉默的绵羊。你用三千字长文教别人做人，但外卖送错了你默默吃完还给了五星好评。互联网需要你，因为没有键侠，评论区将失去灵魂。"
+  },
+  "ROLL": {
+    "code": "ROLL",
+    "cn": "卷王",
+    "intro": "不是在卷，就是在去卷的路上。",
+    "desc": "恭喜你，ROLL卷王人格——内卷宇宙的终极奇点，你的存在本身就是对周围所有人的降维打击。当全班复习到十点，你默默学到凌晨两点；当同事午休吃饭，你边啃面包边敲代码。你不觉得自己在卷，你只是\u201c正常努力\u201d而已——但你的\u201c正常\u201d是别人的\u201c地狱难度\u201d。ROLL最恐怖的地方不是自己卷，而是让所有人被迫跟着卷。你是职场和学校里的通货膨胀源头，一个人拉高了整条赛道的及格线。别人恨你，但又不得不模仿你。卷王不会停下来，因为停下来就是退步——这句话就是你发明的。"
+  },
+  "XIAN-G": {
+    "code": "XIAN-G",
+    "cn": "真香",
+    "intro": "我永远不会……真香！",
+    "desc": "恭喜你，XIAN-G真香人格——打脸界的行为艺术家，Flag回收站的VIP用户。你的人生是一部大型\u201c我永远不会xxx\u201d然后疯狂打脸的连续剧。\u201c我绝不追这部剧\u201d——一晚上通宵看完全集；\u201c我绝对不吃这个\u201d——连点三份外卖还加了辣；\u201c我不会下载这个App\u201d——三天后日均使用六小时。真香定律是你的底层操作系统，Flag就是你的flag回旋镖，扔出去必定精准打回自己脸上。但XIAN-G从不尴尬，因为真香的本质是热爱生活——嘴硬只是仪式感，真香才是真性情。"
+  },
+  "LEMO-N": {
+    "code": "LEMO-N",
+    "cn": "柠檬精",
+    "intro": "我酸了。",
+    "desc": "恭喜你，LEMO-N柠檬精人格——行走的醋坛子，人形酸奶发酵机。朋友换新手机？酸了。同事升职加薪？酸了。网上陌生人秀恩爱？酸得牙都快掉了。你的嫉妒雷达二十四小时在线，扫描范围覆盖朋友圈、微博、小红书全平台。LEMO-N看到别人的好消息时，嘴上说\u201c好棒哦恭喜\u201d，心里的柠檬已经挤出了一杯酸到变形的果汁。但说实话，你的酸不是真的恶意——那是一种包裹在自嘲里的隐秘羡慕，一种不好意思直说\u201c我也想要\u201d的别扭表达。柠檬精的内核，其实是对美好生活的向往。只是表达方式比较……酸。"
+  },
+  "GANG": {
+    "code": "GANG",
+    "cn": "杠精",
+    "intro": "你说得对，但是……",
+    "desc": "恭喜你，GANG杠精人格——互联网抬杠界的终身成就奖获得者。你的大脑里没有\u201c同意\u201d按钮，只有一个巨大的\u201c但是\u201d。你说天气好，GANG说\u201c好是多好？你有气象局数据吗？\u201d；你说这饭好吃，GANG说\u201c好吃是主观感受，你的味觉采样量够吗？\u201d。GANG的经典开场白是\u201c你说得对，但是\u201d，后面跟着三千字反驳论文加十八条参考文献。你不是故意抬杠，你只是\u201c追求真理\u201d——虽然这个真理永远站在对方的反面。杠精存在的意义是什么？是让每个群聊都拥有辩论赛的紧张氛围，让每条朋友圈都可能变成学术答辩现场。"
+  },
+  "SEA": {
+    "code": "SEA",
+    "cn": "海王",
+    "intro": "中央空调，温暖每一个人。",
+    "desc": "恭喜你，SEA海王人格——社交界的中央空调，情感领域的量子叠加态。你的微信置顶比星座还多，聊天列表比小说连载还长。SEA对每个人都刚好够温柔，回复永远及时，关心恰到好处，让每个人都觉得\u201c我是不是有点特别\u201d。然而真相是——你对所有人都这样。SEA不是坏人，你是真的觉得每个人都挺好的，只是\u201c挺好\u201d乘以两百人等于情感破产。你的社交能量像大海一样广阔，但每一滴都很浅。海王最后的结局通常是：鱼塘里的鱼集体上岸，而你一个人在空荡荡的海里发呆。"
+  },
+  "TOOL": {
+    "code": "TOOL",
+    "cn": "工具人",
+    "intro": "我不是人，我是工具。",
+    "desc": "恭喜你，TOOL工具人人格——人际关系中的瑞士军刀，别人生活里的万能充电宝。\u201c帮我取个快递\u201d\u201c帮我带个饭\u201d\u201c帮我写个作业\u201d——TOOL对所有请求的回答只有一个字：好。你的社交价值完全建立在\u201c有用\u201d二字上，你不是朋友，你是一个带感情的多功能App。你明知道自己在被白嫖，但拒绝别人的恐惧远大于被利用的委屈。TOOL的悲剧在于：当你某天没有利用价值时，你会发现聊天列表安静得可怕。但TOOL也有自己的哲学——与其当一个没人找的普通人，不如当一个所有人都需要的工具人。至少被需要，也是一种存在感。"
+  },
+  "MOYU": {
+    "code": "MOYU",
+    "cn": "摸鱼",
+    "intro": "今天也是摸鱼的一天呢。",
+    "desc": "恭喜你，MOYU摸鱼人格——职场划水艺术家，Alt+Tab切换速度全球前三。你能在三十米外精准识别老板的脚步声，你的浏览器永远有四十七个工作相关标签页作为掩护，而真正活跃的是隐藏在后面的小红书和淘宝。MOYU的工作产出与网购购物车大小呈完美反比关系。你不是不会工作，你只是把所有才华都用在了\u201c如何优雅地不工作\u201d上面。摸鱼是一门需要天赋的技术活——既要看起来很忙，又要实际上很闲，这种薛定谔的工作状态，只有MOYU能完美驾驭。你的座右铭是：上班如上坟，摸鱼才是魂。"
+  },
+  "FOOD": {
+    "code": "FOOD",
+    "cn": "干饭人",
+    "intro": "干饭人干饭魂，干饭都是人上人！",
+    "desc": "恭喜你，FOOD干饭人人格——为吃而生的终极美食战士。你的一天只有三件大事：早饭、午饭、晚饭，其余时间都是等饭的过渡期。每天的人生规划从\u201c中午吃什么\u201d开始，手机GPS只保存餐厅定位，相册百分之九十是食物照片。当别人问\u201c你的人生目标是什么\u201d，你的回答是\u201c把这条街的店全吃一遍\u201d。FOOD的味觉记忆比任何记忆都牢靠——三年前那碗拉面的汤底浓度你记得清清楚楚，但昨天开会说了什么你一个字都想不起来。干饭人从不矫情，因为没有什么坏心情是一顿饭解决不了的，如果有，那就两顿。"
+  },
+  "WIFI": {
+    "code": "WIFI",
+    "cn": "网瘾",
+    "intro": "有WiFi的地方就是家。",
+    "desc": "恭喜你，WIFI网瘾人格——数字时代的原住民，离开网络活不过五分钟的赛博人类。手机电量低于百分之二十会触发真实焦虑，进入任何新空间的第一句话永远是\u201cWiFi密码是什么\u201d。你的睡眠时间不由身体决定，而由手机电量决定。\u201c再刷五分钟就睡\u201d是你每晚对自己说的第四十七遍谎言，直到凌晨四点手机砸脸上才算正式入睡。WIFI的社交、娱乐、情感、知识获取全部在线上完成，线下世界对你来说只是一个需要充电的中转站。你不是沉迷手机，你只是觉得现实世界的刷新率太低、内容太无聊、而且还没有弹幕。"
   }
 };
     const TYPE_IMAGES = {
@@ -1494,7 +1598,17 @@
   "EMO": "./image/EMO.png",
   "NIUM-A": "./image/NIUM-A.png",
   "LUCK-Y": "./image/LUCK-Y.png",
-  "DDDD": "./image/DDDD.png"
+  "DDDD": "./image/DDDD.png",
+  "KEY-B": "./image/KEY-B.png",
+  "ROLL": "./image/ROLL.png",
+  "XIAN-G": "./image/XIAN-G.png",
+  "LEMO-N": "./image/LEMO-N.png",
+  "GANG": "./image/GANG.png",
+  "SEA": "./image/SEA.png",
+  "TOOL": "./image/TOOL.png",
+  "MOYU": "./image/MOYU.png",
+  "FOOD": "./image/FOOD.png",
+  "WIFI": "./image/WIFI.png"
 };
 
     const NORMAL_TYPES = [
@@ -1677,6 +1791,46 @@
   {
     "code": "DDDD",
     "pattern": "HMH-MLH-MHM-MML-LHH"
+  },
+  {
+    "code": "KEY-B",
+    "pattern": "HHL-MMH-LLM-HHL-HLH"
+  },
+  {
+    "code": "ROLL",
+    "pattern": "HHH-HLM-MHH-HHH-LML"
+  },
+  {
+    "code": "XIAN-G",
+    "pattern": "MML-MHM-HLM-HMH-MHL"
+  },
+  {
+    "code": "LEMO-N",
+    "pattern": "LMH-LHM-HLH-LML-MLM"
+  },
+  {
+    "code": "GANG",
+    "pattern": "HHM-HLH-LLH-HHM-HLH"
+  },
+  {
+    "code": "SEA",
+    "pattern": "HMM-MHL-HLM-HMH-HLM"
+  },
+  {
+    "code": "TOOL",
+    "pattern": "LMH-MHM-HMM-LLM-MLL"
+  },
+  {
+    "code": "MOYU",
+    "pattern": "MHL-MMM-MLM-LLM-MML"
+  },
+  {
+    "code": "FOOD",
+    "pattern": "MHM-HMM-HML-MHM-HLM"
+  },
+  {
+    "code": "WIFI",
+    "pattern": "LMM-MLM-LMM-LLH-HLM"
   }
 ];
     const DIM_EXPLANATIONS = {
@@ -1762,6 +1916,8 @@
     const GIAO_TRIGGER_QUESTION_ID = 'meme_gate_q2';
     const NIUMA_TRIGGER_QUESTION_ID = 'work_gate_q2';
     const EMO_TRIGGER_QUESTION_ID = 'night_gate_q2';
+    const KEYB_TRIGGER_QUESTION_ID = 'keyboard_gate_q2';
+    const FOOD_TRIGGER_QUESTION_ID = 'food_gate_q2';
 
     const app = {
       shuffledQuestions: [],
@@ -1803,7 +1959,9 @@
         'drink_gate_q1': { triggerValue: 3, q2Id: 'drink_gate_q2' },
         'meme_gate_q1':  { triggerValue: 4, q2Id: 'meme_gate_q2' },
         'work_gate_q1':  { triggerValue: 3, q2Id: 'work_gate_q2' },
-        'night_gate_q1': { triggerValue: 3, q2Id: 'night_gate_q2' }
+        'night_gate_q1': { triggerValue: 3, q2Id: 'night_gate_q2' },
+        'keyboard_gate_q1': { triggerValue: 4, q2Id: 'keyboard_gate_q2' },
+        'food_gate_q1': { triggerValue: 3, q2Id: 'food_gate_q2' }
       };
       Object.entries(gateQ2Map).forEach(([q1Id, { triggerValue, q2Id }]) => {
         const gateIndex = visible.findIndex(q => q.id === q1Id);
@@ -1860,7 +2018,9 @@
             'drink_gate_q1': { triggerValue: 3, q2Id: 'drink_gate_q2' },
             'meme_gate_q1':  { triggerValue: 4, q2Id: 'meme_gate_q2' },
             'work_gate_q1':  { triggerValue: 3, q2Id: 'work_gate_q2' },
-            'night_gate_q1': { triggerValue: 3, q2Id: 'night_gate_q2' }
+            'night_gate_q1': { triggerValue: 3, q2Id: 'night_gate_q2' },
+            'keyboard_gate_q1': { triggerValue: 4, q2Id: 'keyboard_gate_q2' },
+            'food_gate_q1': { triggerValue: 3, q2Id: 'food_gate_q2' }
           };
           if (gateResets[name]) {
             const { triggerValue, q2Id } = gateResets[name];
@@ -1920,6 +2080,14 @@
 
     function getEmoTriggered() {
       return app.answers[EMO_TRIGGER_QUESTION_ID] === 2;
+    }
+
+    function getKeybTriggered() {
+      return app.answers[KEYB_TRIGGER_QUESTION_ID] === 2;
+    }
+
+    function getFoodTriggered() {
+      return app.answers[FOOD_TRIGGER_QUESTION_ID] === 2;
     }
 
     function computeResult() {
@@ -1990,6 +2158,20 @@
         modeKicker = '隐藏人格已激活';
         badge = '匹配度 100% · 深夜emo因子已接管';
         sub = '凌晨三点的灵魂拷问触发了系统的emo检测器，确诊为深夜者。';
+        special = true;
+      } else if (getKeybTriggered()) {
+        finalType = TYPE_LIBRARY['KEY-B'];
+        secondaryType = bestNormal;
+        modeKicker = '隐藏人格已激活';
+        badge = '匹配度 100% · 键盘异常因子已接管';
+        sub = '检测到超标键盘输出量，系统自动为你分配键侠工位。';
+        special = true;
+      } else if (getFoodTriggered()) {
+        finalType = TYPE_LIBRARY.FOOD;
+        secondaryType = bestNormal;
+        modeKicker = '隐藏人格已激活';
+        badge = '匹配度 100% · 干饭异常因子已接管';
+        sub = '胃部信号过强，系统已跳过常规审判，直接封你为干饭人。';
         special = true;
       } else if (bestNormal.similarity < 60) {
         finalType = TYPE_LIBRARY.HHHH;
