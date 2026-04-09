@@ -2144,15 +2144,25 @@
     function updateProgress() {
       const visibleQuestions = getVisibleQuestions();
       const total = visibleQuestions.length;
-      const done = visibleQuestions.filter(q => app.answers[q.id] !== undefined).length;
+      const unanswered = visibleQuestions.filter(q => app.answers[q.id] === undefined);
+      const done = total - unanswered.length;
       const percent = total ? (done / total) * 100 : 0;
       progressBar.style.width = `${percent}%`;
       progressText.textContent = `${done} / ${total}`;
-      const complete = done === total && total > 0;
+      const complete = unanswered.length === 0 && total > 0;
       submitBtn.disabled = !complete;
-      testHint.textContent = complete
-        ? '都做完了。现在可以把你的电子魂魄交给结果页审判。'
-        : '全选完才会放行。世界已经够乱了，起码把题做完整。';
+
+      if (complete) {
+        testHint.innerHTML = '都做完了。现在可以把你的电子魂魄交给结果页审判。';
+      } else if (unanswered.length <= 5 && done > 0) {
+        const links = unanswered.map((q, i) => {
+          const idx = visibleQuestions.indexOf(q) + 1;
+          return `<a href="#" onclick="document.querySelectorAll('.question')[${visibleQuestions.indexOf(q)}].scrollIntoView({behavior:'smooth',block:'center'});return false" style="color:var(--accent);text-decoration:underline;cursor:pointer">第${idx}题</a>`;
+        }).join('、');
+        testHint.innerHTML = `还差 ${unanswered.length} 题：${links}（点击直达）`;
+      } else {
+        testHint.innerHTML = `还剩 ${unanswered.length} 题没答。世界已经够乱了，起码把题做完整。`;
+      }
     }
 
     function sumToLevel(score) {
